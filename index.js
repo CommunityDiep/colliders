@@ -1,7 +1,7 @@
 class Circle {}
 class Polygon {}
-class Point {}
+class Vector {}
 
 exports.Circle = Circle;
 exports.Polygon = Polygon;
-exports.Point = Point;
+exports.Vector = Vector;
