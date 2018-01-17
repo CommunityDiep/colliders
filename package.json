@@ -1,0 +1,9 @@
+{
+  "name": "colliders",
+  "description": "A collision detection library with three classes and a few methods.",
+  "version": "1.0.0",
+  "repository": "github:CommunityDiep/colliders",
+  "bugs": {
+    "url": "https://github.com/CommunityDiep/colliders/issues"
+  }
+}
