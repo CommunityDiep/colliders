@@ -1,4 +1,7 @@
 class Circle {
+	constructor() {
+	}
+	
 	intersects(other) {
 		if (other instanceof Circle) {
 
@@ -14,6 +17,9 @@ class Circle {
 	}
 };
 class Polygon {
+	constructor() {
+	}
+	
 	intersects(other) {
 		if (other instanceof Circle) {
 
@@ -29,6 +35,9 @@ class Polygon {
 	}
 };
 class Vector {
+	constructor() {
+	}
+	
 	intersects(other) {
 		if (other instanceof Circle) {
 
@@ -44,6 +53,9 @@ class Vector {
 	}
 };
 class Line {
+	constructor() {
+	}
+	
 	intersects(other) {
 		if (other instanceof Circle) {
 
