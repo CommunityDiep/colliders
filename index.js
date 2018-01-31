@@ -63,7 +63,9 @@ class Vector {
 	}
 };
 class Line {
-	constructor() {
+	constructor(start, end) {
+		this.start = start;
+		this.end = end;
 	}
 	
 	intersects(other) {
@@ -74,7 +76,20 @@ class Line {
 		} else if (other instanceof Vector) {
 
 		} else if (other instanceof Line) {
-
+			let a = this.start.x;
+			let b = this.start.y;
+			let c = this.end.x;
+			let d = this.end.y;
+			let p = other.start.x;
+			let q = other.start.y;
+			let r = other.end.x;
+			let s = other.end.y;
+			let det = (c - a) * (s - q) - (r - p) * (d - b);
+			if (det === 0)
+				return false;
+			let lambda = ((s - q) * (r - a) + (p - r) * (s - b)) / det;
+			let gamma = ((b - d) * (r - a) + (c - a) * (s - b)) / det;
+			return 0 < lambda && lambda < 1 && 0 < gamma && gamma < 1;
 		} else {
 			throw new TypeError("Cannot find intersection with an external (and thus unsupported) object.")
 		}
